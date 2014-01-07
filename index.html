@@ -68,7 +68,7 @@
 		// set a random scale for the fish - no point them all being the same size!
 		fish.scale.x = fish.scale.y = 0.8 + Math.random() * 0.3;
 		
-		// finally lets set the fish to be a random position..
+		// finally let's set the fish to be a random position..
 		fish.position.x = Math.random() * viewWidth;
 		fish.position.y = Math.random() * viewHeight;
 	
@@ -91,7 +91,7 @@
 
 	}
 
-	// create a bounding box box for the little fishs 
+	// create a bounding box box for the little fish 
 	var fishBoundsPadding = 100;
 	var fishBounds = new PIXI.Rectangle(-fishBoundsPadding,
 										-fishBoundsPadding, 
@@ -99,7 +99,7 @@
 										viewHeight + fishBoundsPadding * 2);
 
 	
-	// create a new wave texture to add over the fishs
+	// create a new wave texture to add over the fish
 	var waveTexture = PIXI.Texture.fromImage("img/waves.png");
 	var wavesTilingSprite = new PIXI.TilingSprite(waveTexture, viewWidth, viewHeight);
 	wavesTilingSprite.alpha = 0.2;
@@ -130,7 +130,7 @@
 			fish.position.y += Math.cos(fish.direction) * fish.speed;
 			fish.rotation = -fish.direction - Math.PI/2;
 
-			// wrap the fishs by testing there bounds..
+			// wrap the fish by testing there bounds..
 			if(fish.position.x < fishBounds.x)fish.position.x += fishBounds.width;
 			else if(fish.position.x > fishBounds.x + fishBounds.width)fish.position.x -= fishBounds.width
 			
